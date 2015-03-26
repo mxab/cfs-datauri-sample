@@ -1,0 +1,22 @@
+<head>
+    <title>cfs-datauri-sample</title>
+</head>
+
+<body>
+<h1>Welcome to Meteor!</h1>
+
+{{> hello}}
+</body>
+
+<template name="hello">
+    <table>
+        {{#each images}}
+            <tr>
+                <td><img src="{{this.url store='org'}}" alt=""/></td>
+            </tr>
+            <tr>
+                <td><img src="{{this.url store='thumb'}}" alt=""/></td>
+            </tr>
+        {{/each}}
+    </table>
+</template>
